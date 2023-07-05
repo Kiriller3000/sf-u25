@@ -38,7 +38,7 @@ def calc_total():
     # Ожидаем загрузки нужного элемента
     # try:
     # WebDriverWait(driver, 10).until(
-    #     EC.text_to_be_present_in_element((By.CSS_SELECTOR, "div.\\.col-sm-4.left > h2"), 'Питомцев:'))
+    #     EC.text_to_be_present_in_element((By.XPATH, "/html/body/div[1]/div/div[1]/text()[1]"), 'Питомцев:'))
     # except:
     #     pass
 
