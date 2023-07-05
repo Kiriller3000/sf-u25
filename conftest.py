@@ -10,21 +10,15 @@ from selenium.webdriver.support import expected_conditions as EC
 def initialize_tests():
     pytest.driver = webdriver.Chrome('chdrv.exe')
     pytest.driver.implicitly_wait(10)
-    # Переходим на страницу авторизации
     pytest.driver.get('https://petfriends.skillfactory.ru/login')
     assert pytest.driver.find_element(By.CSS_SELECTOR, 'div.text-center').text == "Социальная сеть для любителей животных"
 
-    # Вводим email
     pytest.driver.find_element(By.ID, 'email').send_keys('*******')
-    # Вводим пароль
     pytest.driver.find_element(By.ID, 'pass').send_keys('******')
-    # Нажимаем на кнопку входа в аккаунт
     pytest.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
 
-    # Переходим на страницу пользователя
     pytest.driver.implicitly_wait(10)
     pytest.driver.get('https://petfriends.skillfactory.ru/my_pets')
-    # Проверяем, что мы оказались на странице пользователя
     assert pytest.driver.find_element(By.CSS_SELECTOR, 'th').text == "Фото"
 
     yield
