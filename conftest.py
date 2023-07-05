@@ -32,7 +32,7 @@ def calc_total():
     """Вычленяем кол-во животных из профиля пользователя total"""
     # Ожидаем загрузки нужного элемента
     WebDriverWait(pytest.driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "div.\.col-sm-4.left > h2")))
+        EC.presence_of_element_located((By.CSS_SELECTOR, "div.task2.fill div.\\.col-sm-4.left > h2")))
     # Берем текст из трех строк в профиле
     total_in_text = pytest.driver.find_element(By.CSS_SELECTOR, 'div.task3 div').text
     # Получаем пеервый и последний индекс вхождения числа в статистику
