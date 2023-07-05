@@ -38,6 +38,6 @@ def calc_total():
     # Получаем пеервый и последний индекс вхождения числа в статистику
     start_index_total = total_in_text.find(':') + 2
     end_index_total = total_in_text.find('\n', start_index_total)
-    # Получаем число из строки статистики
+    # Получаем число из строки статистики, используя срез
     pytest.total = int (total_in_text [ start_index_total : end_index_total ] )
     return pytest.total
