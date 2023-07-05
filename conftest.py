@@ -15,9 +15,9 @@ def initialize_tests():
     assert pytest.driver.find_element(By.CSS_SELECTOR, 'div.text-center').text == "Социальная сеть для любителей животных"
 
     # Вводим email
-    pytest.driver.find_element(By.ID, 'email').send_keys('dwfcw@ewwfwefdc.com')
+    pytest.driver.find_element(By.ID, 'email').send_keys('*******')
     # Вводим пароль
-    pytest.driver.find_element(By.ID, 'pass').send_keys('access12')
+    pytest.driver.find_element(By.ID, 'pass').send_keys('******')
     # Нажимаем на кнопку входа в аккаунт
     pytest.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
 
